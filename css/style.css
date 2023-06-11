@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+
+/* CSS CUSTOM PROPERTIES */
+
+:root {
+
+  --ff-: 'Open Sans', sans-serif; 
+
+  --fs-300: .875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.5rem;
+  --fs-600: 2rem;
+  --fs-700: 2.5rem;
+  --fs-800: 3rem;
+  --fs-900: 4rem;
+
+  --clr-success: hsl(145, 58%, 27%);
+  --clr-error: hsl(348, 97%, 45%);
+}
+
+/* CSS RESET */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLES */
+
+body {
+    background-color: hsl(210, 7%, 82%);
+    font-family: var(--ff-);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px hsla(0, 0%, 0%, 0.3);
+    max-width: 25rem;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 1.25rem;
+}
+
+/* FORM STYLES */
+
+.form {
+    padding: 1.875rem 2.5rem;
+}
+
+.form__control {
+    margin-bottom: .625rem;
+    padding-bottom: 1.25rem;
+    position: relative;
+}
+
+.form__control label {
+   color: hsl(0, 1%, 25%); 
+   display: block;
+   margin-bottom: .3125rem;
+}
+
+.form__control input {
+    border: 2px solid hsl(0, 0%, 94%);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: .625rem;
+    font-size: var(--fs-300);
+}
+
+.form__control input:focus {
+    outline: none;
+    border-color: hsl(0, 0%, 47%);
+}
+
+.form__control.success input {
+    border-color: var(--clr-success);
+}
+
+.form__control.error input {
+    border-color: var(--clr-error);
+}
+
+.form__control small {
+    color: var(--clr-error);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form__control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: hsl(204, 70%, 53%);
+    border: 2px solid hsl(204, 70%, 53%);
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    font-size: var(--fs-400);
+    padding: .625rem;
+    margin-top: 1.25rem;
+    width: 100%;
+}
+
+.form button:hover,
+.form button:focus {
+    padding: .875rem;
+    color: hsl(204, 63%, 28%);
+}
